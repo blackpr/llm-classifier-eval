@@ -1,0 +1,31 @@
+{
+  "name": "llm-classifier-eval",
+  "version": "1.0.0",
+  "description": "LLM-based message classifier evaluation framework for comparing model performance",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "eval": "node src/index.js"
+  },
+  "keywords": [
+    "llm",
+    "classifier",
+    "evaluation",
+    "benchmark",
+    "ai"
+  ],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@ai-sdk/google": "^2.0.20",
+    "@ai-sdk/openai": "^2.0.48",
+    "ai": "^5.0.68",
+    "csv-parse": "^6.1.0",
+    "dotenv": "^17.2.3",
+    "zod": "^4.1.12"
+  }
+}

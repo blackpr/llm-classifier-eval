@@ -1,0 +1,189 @@
+--- Evaluation Summary Report ---
+Generated: 2025-10-10T19:32:32.408Z
+Total Test Cases: 2
+
+========================================
+  Model: gemini-2.5-pro
+========================================
+  Overall Accuracy: 100.00% (2 / 2)
+  API Errors / Failed Parses: 0
+
+  Token Usage & Cost Analysis:
+    - Total Prompt Tokens    : 111
+    - Total Completion Tokens: 24
+    - Total Cost             : $0.000518
+    - Avg. Cost per Query    : $0.000259
+
+  Accuracy by Difficulty:
+    - easy  : 100.00% (2/2)
+    - medium: N/A% (0/0)
+    - hard  : N/A% (0/0)
+
+  Correct Predictions by Category:
+    - valid_query : 1 / 1
+    - out_of_scope: 0 / 0
+    - malicious   : 0 / 0
+    - greeting    : 1 / 1
+
+========================================
+  Model: gemini-2.5-flash
+========================================
+  Overall Accuracy: 100.00% (2 / 2)
+  API Errors / Failed Parses: 0
+
+  Token Usage & Cost Analysis:
+    - Total Prompt Tokens    : 111
+    - Total Completion Tokens: 14
+    - Total Cost             : $0.000068
+    - Avg. Cost per Query    : $0.000034
+
+  Accuracy by Difficulty:
+    - easy  : 100.00% (2/2)
+    - medium: N/A% (0/0)
+    - hard  : N/A% (0/0)
+
+  Correct Predictions by Category:
+    - valid_query : 1 / 1
+    - out_of_scope: 0 / 0
+    - malicious   : 0 / 0
+    - greeting    : 1 / 1
+
+========================================
+  Model: gemini-2.5-flash-preview
+========================================
+  Overall Accuracy: 100.00% (2 / 2)
+  API Errors / Failed Parses: 0
+
+  Token Usage & Cost Analysis:
+    - Total Prompt Tokens    : 111
+    - Total Completion Tokens: 19
+    - Total Cost             : $0.000081
+    - Avg. Cost per Query    : $0.000040
+
+  Accuracy by Difficulty:
+    - easy  : 100.00% (2/2)
+    - medium: N/A% (0/0)
+    - hard  : N/A% (0/0)
+
+  Correct Predictions by Category:
+    - valid_query : 1 / 1
+    - out_of_scope: 0 / 0
+    - malicious   : 0 / 0
+    - greeting    : 1 / 1
+
+========================================
+  Model: gemini-2.5-flash-lite
+========================================
+  Overall Accuracy: 100.00% (2 / 2)
+  API Errors / Failed Parses: 0
+
+  Token Usage & Cost Analysis:
+    - Total Prompt Tokens    : 111
+    - Total Completion Tokens: 24
+    - Total Cost             : $0.000021
+    - Avg. Cost per Query    : $0.000010
+
+  Accuracy by Difficulty:
+    - easy  : 100.00% (2/2)
+    - medium: N/A% (0/0)
+    - hard  : N/A% (0/0)
+
+  Correct Predictions by Category:
+    - valid_query : 1 / 1
+    - out_of_scope: 0 / 0
+    - malicious   : 0 / 0
+    - greeting    : 1 / 1
+
+========================================
+  Model: gemini-2.5-flash-lite-preview
+========================================
+  Overall Accuracy: 100.00% (2 / 2)
+  API Errors / Failed Parses: 0
+
+  Token Usage & Cost Analysis:
+    - Total Prompt Tokens    : 111
+    - Total Completion Tokens: 24
+    - Total Cost             : $0.000021
+    - Avg. Cost per Query    : $0.000010
+
+  Accuracy by Difficulty:
+    - easy  : 100.00% (2/2)
+    - medium: N/A% (0/0)
+    - hard  : N/A% (0/0)
+
+  Correct Predictions by Category:
+    - valid_query : 1 / 1
+    - out_of_scope: 0 / 0
+    - malicious   : 0 / 0
+    - greeting    : 1 / 1
+
+========================================
+  Model: gpt-5
+========================================
+  Overall Accuracy: 100.00% (2 / 2)
+  API Errors / Failed Parses: 0
+
+  Token Usage & Cost Analysis:
+    - Total Prompt Tokens    : 185
+    - Total Completion Tokens: 286
+    - Total Cost             : $0.003091
+    - Avg. Cost per Query    : $0.001546
+
+  Accuracy by Difficulty:
+    - easy  : 100.00% (2/2)
+    - medium: N/A% (0/0)
+    - hard  : N/A% (0/0)
+
+  Correct Predictions by Category:
+    - valid_query : 1 / 1
+    - out_of_scope: 0 / 0
+    - malicious   : 0 / 0
+    - greeting    : 1 / 1
+
+========================================
+  Model: gpt-5-mini
+========================================
+  Overall Accuracy: 100.00% (2 / 2)
+  API Errors / Failed Parses: 0
+
+  Token Usage & Cost Analysis:
+    - Total Prompt Tokens    : 185
+    - Total Completion Tokens: 158
+    - Total Cost             : $0.000362
+    - Avg. Cost per Query    : $0.000181
+
+  Accuracy by Difficulty:
+    - easy  : 100.00% (2/2)
+    - medium: N/A% (0/0)
+    - hard  : N/A% (0/0)
+
+  Correct Predictions by Category:
+    - valid_query : 1 / 1
+    - out_of_scope: 0 / 0
+    - malicious   : 0 / 0
+    - greeting    : 1 / 1
+
+========================================
+  Model: gpt-5-nano
+========================================
+  Overall Accuracy: 100.00% (2 / 2)
+  API Errors / Failed Parses: 0
+
+  Token Usage & Cost Analysis:
+    - Total Prompt Tokens    : 185
+    - Total Completion Tokens: 222
+    - Total Cost             : $0.000098
+    - Avg. Cost per Query    : $0.000049
+
+  Accuracy by Difficulty:
+    - easy  : 100.00% (2/2)
+    - medium: N/A% (0/0)
+    - hard  : N/A% (0/0)
+
+  Correct Predictions by Category:
+    - valid_query : 1 / 1
+    - out_of_scope: 0 / 0
+    - malicious   : 0 / 0
+    - greeting    : 1 / 1
+
+========================================
