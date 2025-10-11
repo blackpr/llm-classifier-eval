@@ -1,10 +1,10 @@
 # LLM Classifier Evaluation
 
-A professional framework for evaluating and comparing LLM-based message classification performance across multiple models.
+A framework for evaluating and comparing LLM-based message classification performance across multiple models.
 
 ## Overview
 
-This tool benchmarks various Large Language Models (LLMs) on a message classification task for Instashop, a grocery delivery service. It evaluates models from Google (Gemini) and OpenAI (GPT) families, providing comprehensive metrics on accuracy, token usage, and cost efficiency.
+This tool benchmarks various Large Language Models (LLMs) on a message classification task for a delivery service. It evaluates models from Google (Gemini) and OpenAI (GPT) families, providing comprehensive metrics on accuracy, token usage, and cost efficiency.
 
 ## Features
 
