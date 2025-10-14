@@ -12,7 +12,6 @@ This tool benchmarks various Large Language Models (LLMs) on a message classific
 - **Comprehensive Metrics**: Track accuracy, token usage, and per-query costs
 - **Detailed Reporting**: Generate summary reports with difficulty analysis and confusion matrices
 - **Incremental Results**: Save results progressively to handle large test sets
-- **Professional Architecture**: Clean, modular codebase following industry best practices
 
 ## Project Structure
 
