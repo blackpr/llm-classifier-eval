@@ -18,6 +18,8 @@ export function generateHtmlReport(results, modelNames, outputPath) {
     .incorrect { background-color: #f8d7da; color: #721c24; }
     .message-col { max-width: 300px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .message-col:hover { white-space: normal; overflow: visible; }
+    tr:hover { outline: 1px solid #999; }
+    .col-hover { box-shadow: inset 0 0 0 9999px rgba(0,0,0,0.05); }
   </style>
 </head>
 <body>
@@ -43,13 +45,28 @@ export function generateHtmlReport(results, modelNames, outputPath) {
           const prediction = row[`${name}_prediction`];
           const isCorrect = prediction === expected;
           const className = isCorrect ? 'correct' : 'incorrect';
-          const tooltip = `Message: ${row.message_text.replace(/"/g, '&quot;')}&#10;Expected: ${expected}`;
+          const tooltip = `Model: ${name}&#10;Message: ${row.message_text.replace(/"/g, '&quot;')}&#10;Expected: ${expected}`;
           return `<td class="${className}" title="${tooltip}">${prediction}</td>`;
         }).join('')}
       </tr>`;
       }).join('')}
-    </tbody>
   </table>
+  <script>
+    const table = document.querySelector('table');
+    table.addEventListener('mouseover', (e) => {
+      const cell = e.target.closest('td, th');
+      if (!cell) return;
+      const index = cell.cellIndex + 1;
+      document.querySelectorAll(\`td:nth-child(\${index}), th:nth-child(\${index})\`).forEach(el => el.classList.add('col-hover'));
+    });
+    table.addEventListener('mouseout', (e) => {
+      const cell = e.target.closest('td, th');
+      if (!cell) return;
+      const index = cell.cellIndex + 1;
+      document.querySelectorAll(\`td:nth-child(\${index}), th:nth-child(\${index})\`).forEach(el => el.classList.remove('col-hover'));
+    });
+  </script>
+</body>le>
 </body>
 </html>
   `;
