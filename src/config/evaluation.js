@@ -5,4 +5,5 @@ export const EVALUATION_CONFIG = {
   testDataPath: 'data/test_set.csv',
   resultsPath: 'data/evaluation_results.csv',
   summaryPath: 'data/evaluation_summary.txt',
+  htmlReportPath: 'data/evaluation_results.html',
 };

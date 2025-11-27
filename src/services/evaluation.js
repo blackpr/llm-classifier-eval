@@ -4,6 +4,7 @@ import { loadTestData, writeCsvHeader, appendCsvRows } from '../utils/csv-handle
 import { sleep, truncateMessage } from '../utils/helpers.js';
 import { classifyMessage } from './classifier.js';
 import { generateReport } from './report-generator.js';
+import { generateHtmlReport } from './html-generator.js';
 
 async function evaluateTestCase(testCase, modelNames) {
   const { id, message_text, expected_category, sub_category, difficulty, rationale } = testCase;
@@ -83,4 +84,5 @@ export async function runEvaluation() {
   console.log(`\n--- All results saved to ${EVALUATION_CONFIG.resultsPath} ---\n`);
   
   generateReport(results, modelNames, EVALUATION_CONFIG.summaryPath);
+  generateHtmlReport(results, modelNames, EVALUATION_CONFIG.htmlReportPath);
 }
