@@ -1,12 +1,13 @@
 import { MODEL_CONFIGS } from '../config/models.js';
 import { EVALUATION_CONFIG } from '../config/evaluation.js';
-import { loadTestData, writeCsvRows, appendCsvRows } from '../utils/csv-handler.js';
+import { loadTestData, writeCsvHeader, appendCsvRows } from '../utils/csv-handler.js';
 import { sleep, truncateMessage } from '../utils/helpers.js';
 import { classifyMessage } from './classifier.js';
 import { generateReport } from './report-generator.js';
 
 async function evaluateTestCase(testCase, modelNames) {
-  const resultRow = { ...testCase };
+  const { id, message_text, expected_category, sub_category, difficulty, rationale } = testCase;
+  const resultRow = { id, message_text, expected_category, sub_category, difficulty, rationale };
   
   const modelPromises = modelNames.map(async (modelName) => {
     const model = MODEL_CONFIGS[modelName];
@@ -39,13 +40,9 @@ async function evaluateBatch(batch, batchNumber, modelNames, isFirstBatch) {
   const batchResults = await Promise.all(batchPromises);
   
   if (isFirstBatch) {
-    const headers = Object.keys(batchResults[0]).join(',');
-    const rows = batchResults.map(row => {
-      const values = Object.values(row).map(val => `"${String(val).replace(/"/g, '""')}"`);
-      return values.join(',');
-    });
-    const csvContent = `${headers}\n${rows.join('\n')}\n`;
-    writeCsvRows(EVALUATION_CONFIG.resultsPath, [csvContent]);
+    const headers = Object.keys(batchResults[0]);
+    writeCsvHeader(EVALUATION_CONFIG.resultsPath, headers);
+    appendCsvRows(EVALUATION_CONFIG.resultsPath, batchResults);
     console.log(`  📝 Wrote batch ${batchNumber} to ${EVALUATION_CONFIG.resultsPath}`);
   } else {
     appendCsvRows(EVALUATION_CONFIG.resultsPath, batchResults);
